@@ -1,0 +1,26 @@
+.card-body-custom {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.flex {
+    display: flex;
+}
+
+.word-list {
+    height: calc(100vh - 160px);
+    overflow-y: scroll;
+}
+
+.word-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.word-list ul li {
+    margin: 10px 0px;
+}
+
+.word-list ul li a {
+    text-decoration: none;
+}
