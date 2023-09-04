@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { dataSource } from "./Data";
 const Layout = () => {
   return (
     <div className="container">
@@ -41,72 +42,13 @@ const Layout = () => {
               </div>
               <div className="word-list mt-3">
                 <ul>
-                  
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  <li><a href="">ICT</a></li>
-                  
+                  {[...dataSource]
+                    .sort((a, b) => a.word > b.word ? 1 : -1)
+                    .map((n) => (
+                      <li key={n.id}>
+                        <a href="">{n.word}</a>
+                      </li>
+                    ))}
                 </ul>
               </div>
             </div>
