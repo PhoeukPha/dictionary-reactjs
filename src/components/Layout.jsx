@@ -1,12 +1,29 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Form from "react-bootstrap/Form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+// import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { dataSource } from "./Data";
+import { useState } from "react";
 const Layout = () => {
+  const [filteredList, setFilteredList] = new useState(dataSource);
+
+  const filterBySearch = (event) => {
+    // Access input value
+    const query = event.target.value;
+    // Create copy of item list [...dataSource] is Spreed Operator
+    var updatedList = [...dataSource];
+    // Include all elements which includes the search query
+    updatedList = updatedList.filter((item) => {
+      return (
+        item.word.toString().toLowerCase().indexOf(query.toLowerCase()) > -1
+      );
+    });
+    // Trigger render with updated values
+    setFilteredList(updatedList);
+  };
+
   return (
     <div className="container">
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
@@ -30,20 +47,18 @@ const Layout = () => {
           <div className="row">
             <div className="col-md-3 col-xl-3">
               <div className="flex">
-                <Form.Control
-                  className="shadow-none"
+                <input
+                  className="shadow-none form-control"
                   type="text"
                   id="txtSearch"
                   placeholder="Search Word"
+                  onChange={filterBySearch}
                 />
-                <button type="submit" className="btn btn-sm btn-success ms-2">
-                  <FontAwesomeIcon icon={faMagnifyingGlass} />
-                </button>
               </div>
               <div className="word-list mt-3">
                 <ul>
-                  {[...dataSource]
-                    .sort((a, b) => a.word > b.word ? 1 : -1)
+                  {filteredList
+                    .sort((a, b) => (a.word > b.word ? 1 : -1))
                     .map((n) => (
                       <li key={n.id}>
                         <a href="">{n.word}</a>
@@ -52,7 +67,10 @@ const Layout = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-md-9 col-xl-9">He</div>
+            <div className="col-md-9 col-xl-9">
+              <div className="card">
+              </div>
+            </div>
           </div>
         </div>
       </div>

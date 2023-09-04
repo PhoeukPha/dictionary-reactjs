@@ -1,8 +1,18 @@
-# React + Vite
+# វចនានុក្រម ពាក្យបច្ចេកទេស
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ចូលរួមបន្ថែមពាក្យថ្មីឬកែសម្រួលពាក្យដែលមានស្រាប់
 
-Currently, two official plugins are available:
+បើលោកអ្នកចង់ចូលរួមបន្ថែមពាក្យថ្មីចូលគេហទំព័រ សូមធ្វើតាមការណែនាំខាងក្រោម៖
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ចូលទៅ `src/components/Data.js`
+- ការបន្ថែមពាក្យនីមួយៗត្រូវមានទម្រង់ដូចខាងក្រោម៖​
+  ```
+    {
+        id: ,
+        word:"",
+        meaning:"",
+    },
+  ```
+  សូមបង្កើត Pull Request ចូល branch `Dev`។
+
+[ចូលទៅកាន់គេហទំព័រ →]()
