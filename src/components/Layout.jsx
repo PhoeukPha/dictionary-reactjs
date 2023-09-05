@@ -6,9 +6,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { dataSource } from "./Data";
 import { useState } from "react";
+
 const Layout = () => {
   const [filteredList, setFilteredList] = new useState(dataSource);
+  const [selectedWord, setSelectedWord] = useState(null);
 
+  // When Click on Word it show Meaning
+  const handleWordClick = (word) => {
+    setSelectedWord(word);
+  };
+
+  // Search
   const filterBySearch = (event) => {
     // Access input value
     const query = event.target.value;
@@ -35,7 +43,10 @@ const Layout = () => {
               <Nav.Link href="">About Us</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link eventKey={2} href="">
+              <Nav.Link
+                href="https://github.com/PhoeukPha/dictionary-reactjs/#readme"
+                target="_blank"
+              >
                 <FontAwesomeIcon icon={faGithub} size="xl" />
               </Nav.Link>
             </Nav>
@@ -61,14 +72,39 @@ const Layout = () => {
                     .sort((a, b) => (a.word > b.word ? 1 : -1))
                     .map((n) => (
                       <li key={n.id}>
-                        <a href="">{n.word}</a>
+                        <a
+                          onClick={() => handleWordClick(n)}
+                          className={selectedWord === n ? "selected" : ""}
+                        >
+                          {n.word}
+                        </a>
                       </li>
                     ))}
                 </ul>
               </div>
             </div>
             <div className="col-md-9 col-xl-9">
-              <div className="card">
+              <div className="card border-0">
+                {selectedWord ? (
+                  <>
+                    <div className="card-header bg-transparent">
+                      <h2 className="color-purple">{selectedWord.word}</h2>
+                    </div>
+                    <div className="card-body">
+                      <div className="inline-2"
+                        dangerouslySetInnerHTML={{
+                          __html: selectedWord.meaning,
+                        }}
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="card-body card-full-screen">
+                      <h3>Select a word to see its definition.</h3>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

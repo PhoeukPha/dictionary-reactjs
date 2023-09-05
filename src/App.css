@@ -23,4 +23,19 @@
 
 .word-list ul li a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+.card-full-screen {
+    height: calc(100vh - 160px);
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+.inline-2{
+    line-height: 2;
+}
+.color-purple{
+    color: #6f42c1;
 }
