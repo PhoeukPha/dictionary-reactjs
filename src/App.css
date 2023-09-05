@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Battambang&display=swap');
+
+body,code {
+    font-family: system-ui,-apple-system,'Battambang',"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+}
+
 .card-body-custom {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
