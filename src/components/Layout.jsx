@@ -37,10 +37,13 @@ const Layout = () => {
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="/">Dictionary</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            className="border-0 shadow-none"
+          />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="">About Us</Nav.Link>
+              {/* <Nav.Link href="">About Us</Nav.Link> */}
             </Nav>
             <Nav>
               <Nav.Link
@@ -66,7 +69,7 @@ const Layout = () => {
                   onChange={filterBySearch}
                 />
               </div>
-              <div className="word-list mt-3">
+              <div className="word-list mt-3 mh-50">
                 <ul>
                   {filteredList
                     .sort((a, b) => (a.word > b.word ? 1 : -1))
@@ -84,14 +87,15 @@ const Layout = () => {
               </div>
             </div>
             <div className="col-md-9 col-xl-9">
-              <div className="card border-0">
+              <div className="card border-0 mh-50">
                 {selectedWord ? (
                   <>
-                    <div className="card-header bg-transparent">
+                    <div className="card-header bg-transparent m-border-top">
                       <h2 className="color-purple">{selectedWord.word}</h2>
                     </div>
-                    <div className="card-body">
-                      <div className="inline-2"
+                    <div className="card-body scroll-y card-full-screen-207">
+                      <div
+                        className="inline-2"
                         dangerouslySetInnerHTML={{
                           __html: selectedWord.meaning,
                         }}
@@ -100,11 +104,16 @@ const Layout = () => {
                   </>
                 ) : (
                   <>
-                    <div className="card-body card-full-screen">
+                    <div className="card-body card-full-screen center">
                       <h3>Select a word to see its definition.</h3>
                     </div>
                   </>
                 )}
+                <div className="card-footer bg-transparent text-center">
+                  <a href="https://www.pha-dev.com" target="__blank">
+                    www.pha-dev.com
+                  </a>
+                </div>
               </div>
             </div>
           </div>
