@@ -27,15 +27,54 @@
 }
 
 .card-full-screen {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 145px);
+}
+
+.card-full-screen-207 {
+    height: calc(100vh - 209px);
+}
+
+.center {
     text-align: center;
     align-items: center;
     display: flex;
     justify-content: space-around;
 }
-.inline-2{
+
+.card-footer a {
+    text-decoration: none;
+}
+
+.inline-2 {
     line-height: 2;
 }
-.color-purple{
+
+.color-purple {
     color: #6f42c1;
+}
+
+.mobile-show {
+    display: none;
+}
+
+/* .scroll-y {
+    overflow-y: scroll;
+} */
+/* .navbar-toggler:focus{
+
+} */
+@media screen and (max-width:767px) {
+    .mh-50 {
+        height: calc(50vh - 80px);
+
+    }
+
+    .scroll-y {
+        overflow-y: scroll;
+    }
+
+    .m-border-top {
+        border-top: 1px solid #c3c3c3b5;
+        border-radius: 0 !important;
+    }
 }
