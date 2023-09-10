@@ -1,7 +1,8 @@
-<center>
-<a>Buy Me a Coffee</a>
-<img src="khqr.jpg" alt="Buy Me a Coffee" />
+<center style="text-align: center;">
+<a style="font-size: 25px;">Buy Me a Coffee</a>
+<img src="khqr.jpg" alt="Buy Me a Coffee" style="width: 50%;"/>
 </center>
+
 # វចនានុក្រម ពាក្យបច្ចេកទេស
 
 ពាក្យទាំងអស់ភាគច្រើនយកចេញពី Page ក្រសួង និងយកចេញពី Website មួយចំនួន និងការស្រាវជ្រាវស្វែងរកទៅតាមប្រភពផ្សេងៗ។
