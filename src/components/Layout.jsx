@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { dataSource } from "./Data";
 import { useState } from "react";
 
@@ -46,6 +46,13 @@ const Layout = () => {
               {/* <Nav.Link href="">About Us</Nav.Link> */}
             </Nav>
             <Nav>
+              <Nav.Link href="https://t.me/camboits" target="_blank">
+                <FontAwesomeIcon
+                  icon={faTelegram}
+                  size="xl"
+                  className="telegram"
+                />
+              </Nav.Link>
               <Nav.Link
                 href="https://github.com/PhoeukPha/dictionary-reactjs/#readme"
                 target="_blank"
