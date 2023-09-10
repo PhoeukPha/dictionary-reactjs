@@ -2,10 +2,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { dataSource } from "./Data";
 import { useState } from "react";
+import Icon from "./Icon";
 
 const Layout = () => {
   const [filteredList, setFilteredList] = new useState(dataSource);
@@ -15,7 +16,6 @@ const Layout = () => {
   const handleWordClick = (word) => {
     setSelectedWord(word);
   };
-
   // Search
   const filterBySearch = (event) => {
     // Access input value
@@ -30,6 +30,19 @@ const Layout = () => {
     });
     // Trigger render with updated values
     setFilteredList(updatedList);
+  };
+
+  // Click on Icon to generate Text to Speak
+  const handleIconClick = (word) => {
+    speak(word);
+  };
+  const speak = (text) => {
+    const synth = window.speechSynthesis;
+    if (synth.speaking) {
+      synth.cancel();
+    }
+    const utterance = new SpeechSynthesisUtterance(text);
+    synth.speak(utterance);
   };
 
   return (
@@ -97,8 +110,9 @@ const Layout = () => {
               <div className="card border-0 mh-50">
                 {selectedWord ? (
                   <>
-                    <div className="card-header bg-transparent m-border-top">
-                      <h2 className="color-purple">{selectedWord.word}</h2>
+                    <div className="card-header bg-transparent m-border-top flex">
+                      <h2 className="color-purple me-2">{selectedWord.word}</h2>
+                      <Icon word={selectedWord} onIconClick={handleIconClick} />
                     </div>
                     <div className="card-body scroll-y card-full-screen-207">
                       <div
