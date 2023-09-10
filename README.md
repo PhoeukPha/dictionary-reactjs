@@ -1,7 +1,7 @@
-<center style="text-align: center;">
-<a style="font-size: 25px;">Buy Me a Coffee</a>
-<img src="khqr.jpg" alt="Buy Me a Coffee" style="width: 50%;"/>
-</center>
+<div align="center">
+  <p align="center">Buy Me a Coffee</p>
+  <img src="khqr.jpg" alt="Buy Me a Coffee" style="width: 15%;"/>
+</div>
 
 # វចនានុក្រម ពាក្យបច្ចេកទេស
 
