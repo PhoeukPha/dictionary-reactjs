@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Battambang&display=swap');
 
-body,code {
-    font-family: system-ui,-apple-system,'Battambang',"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-
+body,
+code {
+    font-family: system-ui, -apple-system, 'Battambang', "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+code{
+    font-weight: bold;
 }
 
 .card-body-custom {
@@ -11,6 +14,10 @@ body,code {
 
 .flex {
     display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
 .word-list {
@@ -62,6 +69,14 @@ body,code {
 
 .mobile-show {
     display: none;
+}
+
+.telegram:hover {
+    color: #229ED9;
+}
+
+.icon {
+    cursor: pointer;
 }
 
 /* .scroll-y {
