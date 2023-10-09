@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
+// import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { dataSource } from "./Data";
 import { useState } from "react";
