@@ -132,7 +132,7 @@ const Layout = () => {
                 )}
                 <div className="card-footer bg-transparent text-center">
                   <a href="https://pha-dev.blogspot.com" target="__blank">
-                    www.pha-dev.com
+                    https://pha-dev.blogspot.com
                   </a>
                 </div>
               </div>
