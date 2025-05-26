@@ -1,8 +1,3 @@
-<div align="center">
-  <p align="center">Buy Me a Coffee</p>
-  <img src="khqr.jpg" alt="Buy Me a Coffee" style="width: 15%;"/>
-</div>
-
 # ពាក្យគន្លឹះបច្ចេកវិទ្យាឌីជីថល
 
 ពាក្យទាំងអស់ភាគច្រើនយកចេញពី Page ក្រសួង និងយកចេញពី Website មួយចំនួន និងការស្រាវជ្រាវស្វែងរកទៅតាមប្រភពផ្សេងៗ។
